@@ -1,0 +1,7 @@
+{
+  "name": "pstproj",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
