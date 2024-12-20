@@ -1,0 +1,50 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>loc</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">loc</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="form-container">
+    <form>
+      <ion-item>
+        <ion-label position="floating">Location Name</ion-label>
+        <ion-input name="locationName" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Road Type</ion-label>
+        <ion-select ngModel="roadType" name="roadType" required>
+          <ion-select-option  value="road">National Highway</ion-select-option>
+          <ion-select-option  value="road">State Highway</ion-select-option>
+          <ion-select-option  value="road"></ion-select-option>
+
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Location Type</ion-label>
+        <ion-select ngModel="locationType" name="locationType" required>
+          <ion-select-option  value="location">Hill-Station</ion-select-option>
+          <ion-select-option  value="location">Planes</ion-select-option>
+          <ion-select-option  value="location">Other State</ion-select-option>
+          <ion-select-option  value="location">Union Territory</ion-select-option>
+
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Description</ion-label>
+        <ion-textarea name="description"></ion-textarea>
+      </ion-item>
+
+      <ion-button expand="block" type="submit">Submit</ion-button>
+    </form>
+  </div>
+</ion-content>

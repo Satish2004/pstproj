@@ -1,0 +1,94 @@
+
+.search-form {
+
+    background: #fff;
+    width: 300px;
+    margin: 10px auto;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    border-radius: 4px;
+    box-shadow: 0 2px 25px rgba(0, 0, 0, 0.2);
+    float: left;
+  
+    .search-action {
+  
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      flex-direction: row;
+      // margin: 10px auto;
+  
+  
+      input {
+        margin-left: 4%;
+        margin-bottom: 3px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        font-size: medium;
+        width: 70%;
+        padding: 10px;
+        border: 0;
+        border-bottom: 1px solid #747474;
+        outline: none;
+        -webkit-transition: all .2s;
+        transition: all .2s;
+        font-weight: bold;
+  
+        &::-webkit-input-placeholder,
+        &::-moz-placeholder,
+        &:-ms-input-placeholder,
+        &::placeholder {
+          text-transform: uppercase;
+        }
+  
+        &:focus {
+          border-bottom: 2px solid var(--primary_body_color);
+        }
+      }
+  
+      button {
+        display: inline-block;
+        // width: 100%;
+        // width: fit-content;
+        // min-width: 140px;
+        margin: auto;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        text-transform: capitalize;
+        background:  var(--solo_button_back_colour);
+        color: var(--solo_button_text_colour);
+        letter-spacing: 0.2px;
+        outline: 0;
+        -webkit-transition: all .3s;
+        transition: all .3s;
+        font-weight: 900;
+        margin-right: 2px;
+  
+        &.set_btn {
+          background-color: var(--solo_button_back_colour);
+          color: var(--solo_button_text_colour);
+  
+          &:hover {
+            background:  var(--solo_button_back_colour);
+          }
+        }
+  
+        &.cancel_btn {
+          background-color: #e6dede;
+          color: var(--solo_button_back_colour);
+  
+          &:hover {
+            background: #d8d8d8;
+          }
+        }
+      }
+    }
+  
+  }
+  

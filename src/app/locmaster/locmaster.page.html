@@ -1,0 +1,97 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>locmaster</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- <app-searchbox 
+    (search_function)="searchStudentTable($event)" 
+    (clear_function)="ClearStudentTable($event)"
+    [searchEnabled]="false" 
+    [searchTextDisable]="false">
+  </app-searchbox> -->
+
+  <div class="container">
+    <h1>DISTANCE LIST</h1>
+    <div class="table-container">
+      <table style="overflow-x:auto;" id="enq_table" class="table table-striped table-hover">
+        <thead>
+          <tr class="table-header">
+            <th class="table_serial_no" scope="col">S.No.</th>
+            <th scope="col">From</th>
+            <th scope="col">To</th>
+            <th scope="col">Distance (in Km)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of distanceList">
+            <td scope="row" data-label="S.No.">{{ item.sNo }}</td>
+            <td data-label="From">{{ item.from }}</td>
+            <td data-label="To">{{ item.to }}</td>
+            <td data-label="Distance (in Km)">{{ item.distance }}</td>
+            <!-- <td data-label="Action" id="hover_btn"> -->
+              <!-- Buttons can be uncommented if needed -->
+              <!-- <button class="btn-action" (click)="edit_entry(data.user_table_id)">
+                <ion-icon name="pencil"></ion-icon>
+              </button>
+              <button class="btn-action" (click)="pre_delete_entry(data.user_table_id)">
+                <ion-icon name="trash"></ion-icon>
+              </button> -->
+            <!-- </td> -->
+          </tr>
+        </tbody>
+      </table>
+    </div>
+<!-- 
+    <app-loader [visible]="loading_1"></app-loader>
+
+    <app-pagination-component 
+      [data]="master_data_list" 
+      [pagination_reset]="pagination_reset"
+      (pageChanged)="pag_change($event)">
+    </app-pagination-component> -->
+
+    <h4 class="text-white mt-5 text-center"></h4>
+    <div class="form-container">
+      <form>
+        <label>FROM <span style="color: red;">*</span></label>
+        <input
+          type="text"
+          placeholder="Enter from...."
+          id="from"
+          autocomplete="nope"
+          required
+        /><br />
+
+        <label>TO <span style="color: red;">*</span></label>
+        <input
+          type="text"
+          placeholder="Enter to...."
+          id="to"
+          required
+          autocomplete="nope"
+          aria-required="true"
+        /><br />
+
+        <label>DISTANCE (in KM) <span style="color: red;">*</span></label>
+        <input
+          type="number"
+          placeholder="Enter distance...."
+          id="distance"
+          required
+          autocomplete="nope"
+          aria-required="true"
+        />
+
+
+        <div class="action">
+          <button id="submit" class="add_btn" (click)="addEntry()">Add</button>
+          <button id="update" class="update_btn">Update</button>
+          <button class="cancel_btn" (click)="entry_reset_form()">Cancel</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</ion-content>

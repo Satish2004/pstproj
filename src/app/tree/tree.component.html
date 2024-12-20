@@ -1,0 +1,22 @@
+<ul>
+  <ng-container *ngFor="let node of currentNodes">
+    <li class="list-group-item list-group-item-action list-group-item-light">
+      <span
+        *ngIf="hasChildren(node.id)"
+        (click)="toggleNode(node.id)"
+        style="cursor: pointer;"
+      >
+        {{ expandedNodes[node.id] ? '-' : '+' }}
+      </span>
+      {{ node.name }}
+      <ul *ngIf="expandedNodes[node.id]" >
+        <app-tree [data]="data" [parentId]="node.id"></app-tree>
+      </ul>
+    </li>
+  </ng-container>
+</ul>
+
+
+
+
+

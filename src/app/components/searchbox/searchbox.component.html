@@ -1,0 +1,8 @@
+
+<div class="search-form">
+  <div class="search-action">
+    <input type="text" [disabled]="searchTextDisable" [placeholder]="placeholder" id="search_list" [(ngModel)]="searchText" (keyup.enter)='searchTable(0)'>
+    <button class="set_btn" [id]="search_id" (click)="searchTable(0)"><i class="fa-solid fa-magnifying-glass"></i></button>
+    <button class="cancel_btn cancel_search_class" [id]="cancel_id" (click)="clearsearch()"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+</div>

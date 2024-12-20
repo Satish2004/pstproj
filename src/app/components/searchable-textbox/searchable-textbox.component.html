@@ -1,0 +1,9 @@
+<div class="input-field">
+  <label >{{title}}</label>
+  <input type="text" placeholder="{{placeholder}}" id="{{id}}" class="" (keyup)="FetchItemDetailsSearchTextBox($event)" (focusout)="check_Name_exist($event)" value="" autocomplete="nope">
+  <div class="suggestion_box" id="suggestion_box" >
+    <div *ngFor="let data of TextSugesionArray;" (click)='SelectSugesion(data.supplier_name)' class="suggestion_div" >
+      <button class="" type="button" ><span> {{data.supplier_name}}</span></button>
+    </div>
+  </div>
+</div>

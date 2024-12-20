@@ -1,0 +1,135 @@
+ 
+  // new pagination css
+  
+  //----------  responsive breakpoints
+  //------------------------------------------------------------------------------
+  @mixin breakpoint ($value) {
+    @if $value == 'phone' {
+      @media only screen and (min-width: 120px) and (max-width: 767px) { @content; }
+    } @else if $value == 'tablet' {
+      @media only screen and (min-width: 768px) and (max-width: 1024px) { @content; }
+    } @else if $value == 'touch' {
+      @media only screen and (min-width: 120px) and (max-width: 1024px) { @content; }
+    } @else if $value == 'desktop' {
+      @media only screen and (min-width: 1025px) { @content; }
+    } @else {
+      @media only screen and (max-width: $value) { @content; }
+    }
+  }
+  
+  // Colors
+  $white: #fff;
+  $black: #000;
+  $grey: #595959;
+  $grey-dark: #2b2b2b;
+  $grey-light: #eee;
+  $purple: #51087E;
+  $blue: #017ac7;
+  $maroon: maroon;
+  $green: green;
+  
+  // Transition
+  $duration: 400ms;
+  $easing: ease;
+  
+  //----------  reset
+  //------------------------------------------------------------------------------
+  htm,
+  body {
+    font-family: sans-serif;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  //----------  pagination
+  //------------------------------------------------------------------------------
+  .pagination-wrapper {
+    text-align: center;
+    margin: 10px 0;
+  }
+  
+  .pagination {
+      display: inline-block;
+      height: 70px;
+      margin-top: 10px;
+      padding: 0 25px;
+      border-radius: 0px;
+      background-color: $grey-light;
+  
+      @include breakpoint(3199px) {
+          // height: 50px;
+          height: 35px;
+          margin-top: 10px;
+          // padding: 0 10px;
+          padding: 0 0px;
+          // border-radius: 5px;
+      }
+  }
+  
+  .page-numbers {
+      display: block;
+      padding: 0 25px;
+      float: left;
+      transition: $duration $easing;
+      color: $grey;
+      font-size: 20px;
+      letter-spacing: 0.1em;
+      line-height: 70px;
+  
+      &:hover,
+      &.current {
+          background-color: $maroon;
+          color: $white;
+      }
+  
+      &.prev:hover,
+      &.next:hover {
+          // border-radius: ;
+      }
+  
+      @include breakpoint(3199px) {
+          // padding: 0 15px;
+          padding: 0 10px;
+          font-size: 14px;
+          // line-height: 50px;
+          line-height: 35px;
+      }
+  
+      // @include breakpoint(touch) {
+      //     padding: 0 14px;
+      //     display: none;
+  
+      //     &:nth-of-type(2) {
+      //         position: relative;
+      //         padding-right: 50px;
+  
+      //         &::after {
+      //             content: '...';
+      //             position: absolute;
+      //             font-size: 20px;
+      //             top: 0;
+      //             left: 45px;
+      //         }
+      //     }
+  
+      //     &:nth-child(-n+3),
+      //     &:nth-last-child(-n+3) {
+      //         display: block;
+      //     }
+  
+      //     &:nth-last-child(-n+4) {
+      //         padding-right: 14px;
+  
+      //         &::after {
+      //             content: none;
+      //         }
+      //     }
+      // }
+  }
+  
+  .page-numbers {
+    cursor: pointer;
+  }
+  

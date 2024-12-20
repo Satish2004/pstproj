@@ -1,0 +1,20 @@
+
+
+<div class="pagination-wrapper" id="pagination" *ngIf="pagination_visible">
+  <div class="pagination">
+    <a class="prev page-numbers" (click)="pagenation($event)" data-val="1" style="padding: 0 5px;" >{{PrevPlus}}</a>
+    <a class="page-numbers" (click)="pagenation($event)" data-val="Prev" >{{Prev}}</a>
+
+    <a class="page-numbers" (click)="pagenation($event)"  data-val="-4" [style]="(pag_no-4 <=  0) ? 'pointer-events: none; display: none;' : null" >{{parseInt(this.pag_no)-4}}</a>
+    <a class="page-numbers" (click)="pagenation($event)"  data-val="-3" [style]="(pag_no-3 <= 0) ? 'pointer-events: none; display: none;' : null">{{parseInt(this.pag_no)-3}}</a>
+    <a class="page-numbers" (click)="pagenation($event)" data-val="-2" [style]="(pag_no-2 <= 0) ? 'pointer-events: none; display: none;' : null">{{parseInt(this.pag_no)-2}}</a>
+    <a class="page-numbers" (click)="pagenation($event)" data-val="-1" [style]="(pag_no-1 <= 0) ? 'pointer-events: none; display: none;' : null">{{parseInt(this.pag_no)-1}}</a>
+    <a aria-current="page" (click)="pagenation($event)" data-val="1" class="page-numbers current">{{this.pag_no}}</a>
+    <a class="page-numbers" (click)="pagenation($event)" value="2" data-val="2" [style]="((totalLength < 10) || (pag_no+1 > pang_no_limit))? 'pointer-events: none; display: none;' : null" >{{parseInt(this.pag_no)+1}}</a>
+    <a class="page-numbers" (click)="pagenation($event)" data-val="3" [style]="((totalLength < 10) || (pag_no+2 > pang_no_limit)) ? 'pointer-events: none; display: none;' : null">{{parseInt(this.pag_no)+2}}</a>
+    <a class="page-numbers" (click)="pagenation($event)" data-val="4" [style]="((totalLength < 10) || (pag_no+3 > pang_no_limit)) ? 'pointer-events: none; display: none;' : null">{{parseInt(this.pag_no)+3}}</a>
+    <a class="page-numbers" (click)="pagenation($event)" data-val="5" [style]="((totalLength < 10) || (pag_no+4 > pang_no_limit)) ? 'pointer-events: none; display: none;' : null">{{parseInt(this.pag_no)+4}}</a>
+    <a class="page-numbers" (click)="pagenation($event)" data-val="Next"  [style]="totalLength < 10 ? 'pointer-events: none; ' : null">{{Next}}</a>
+    <a class="next page-numbers" (click)="pagenation($event)" data-val="Next" style="padding: 0 5px;"  [style]="totalLength < 10 ? 'pointer-events: none; ' : null">{{NextPlus}}</a>
+  </div>
+</div>

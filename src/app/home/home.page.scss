@@ -1,27 +1,61 @@
 #container {
+  // border: 1px solid black;
   text-align: center;
-
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%,-50%);
+  height: 100vh;
+  width: 50vw;
   font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+  font-family: sans-serif;
 }
 
-#container a {
-  text-decoration: none;
+#container h1{
+  color: #0071bd;
+}
+
+.table-container{
+  //border: 1px solid black;
+  text-align: center;
+  position: absolute;
+  left: 35%;
+}
+
+.form-container{
+  border: 1px solid black;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  padding: 30px;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 80%;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+label{
+  position: fixed;
+}
+
+input{
+  margin-left: 150px;
+}
+
+.button1,.button2,.button3{
+  padding: 10px;
+  display: inline-block;
+  margin: 30px;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  color: white;
+  background-color: #0071bd;
+
+}
+
+.button1:hover,.button2:hover,.button3:hover{
+  color: white;
+  background-color: #034570;
 }

@@ -1,0 +1,106 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  width: 100%;
+  padding: 20px;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+.container h1 {
+  color: #0071bd;
+  margin-bottom: 20px;
+}
+
+.table-container {
+  margin: 16px 0;
+  overflow-x: auto;
+  width: 100%;
+  max-width: 80%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  padding: 8px;
+  border: 1px solid #ccc;
+  text-align: center;
+  height: 50px;
+  word-wrap: break-word; /* Allows breaking text within cells */
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  padding: 20px;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 600px; /* Limits max form width */
+  border-radius: 10px;
+  border: 1px solid black;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+.add_btn,
+.update_btn,
+.cancel_btn {
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  color: white;
+  background-color: #0071bd;
+  border: none;
+}
+
+.add_btn:hover,
+.update_btn:hover,
+.cancel_btn:hover {
+  background-color: #034570;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .table-container {
+    max-width: 100%;
+  }
+
+  .form-container {
+    width: 90%;
+  }
+
+  input {
+    width: 100%; /* Ensures inputs are full-width on smaller screens */
+  }
+}
